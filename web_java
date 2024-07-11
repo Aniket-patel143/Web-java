@@ -1,0 +1,65 @@
+1.apache 9 dw
+
+2.eclipse-
+
+1. dynamic web project
+
+3...java resources--right click add pakage- then servelet
+in servalet file..------------------
+
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		PrintWriter pw= response.getWriter();
+		String s= request.getParameter("t1");
+		String s1= request.getParameter("t2");
+		String s2= request.getParameter("t3");
+		String s3= request.getParameter("Male");
+		String s4= request.getParameter("Female");
+		String s5= request.getParameter("course");
+		pw.print("<h1> Name ,"+s);
+		pw.print("<h1> pass ,"+s1);
+		pw.print("<h1> email ,"+s2);
+		pw.print("<h1> male ,"+s3);
+		pw.print("<h1> female ,"+s4);
+		pw.print("<h1> course ,"+s5);
+		pw.close();
+	
+	}
+	
+
+src -webapp in create HTML file
+
+
+in html form in action= servelet name
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Form</h1>
+
+<form action="loginser">
+	User Name:<input type="text" name=t1><br><br>
+	Enter password:<input type="text" name=t2><br><br>
+	Email_ID:<input type="text" name=t3><br><br>
+	
+	Select gender <input type="radio" name="Male">Male
+	<input type="radio" name="Female">Female
+	<br><br>
+	
+	Select Your Course <select name="course">
+  <option value="volvo">IT</option>
+  <option value="saab" >MscIt</option>
+  <option value="opel">Bca</option>
+  <option value="audi">Bcom</option>
+</select><br><br>
+	<input type="checkbox"> I agree wit terms and Conditions
+	<br><br>	
+	
+	<button type="submit">Enroll</button>
+	<button type="reset">Reset</button>
+</form>
+
+</body>
+</html>
